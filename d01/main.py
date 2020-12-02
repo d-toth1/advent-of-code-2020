@@ -1,5 +1,5 @@
-# Advent of Code
-# Two sum problem
+# Advent of Code Day 1
+# Two & three sum problems
 # in Python
 # d-toth1
 
@@ -7,15 +7,13 @@
 with open("input.txt") as f:
     data = f.read().splitlines()
 
-for i in range(len(data)):
-    data[i] = int(data[i])
+data = list(map(int, data))
 
 
 def two_sum_prod(a, two_sum):
-    """
-    Given an array 'a', finds the elements
-    of 'a' that have a sum equal to two_sum
-    and returns their product
+    """ Finds two elements in an array
+    that have a desired sum and returns their
+    product.
     
     """
     sum_dict = {}
@@ -32,10 +30,8 @@ def two_sum_prod(a, two_sum):
 
 
 def three_sum_prod(a, three_sum):
-    """
-    Does the same thing as the above
-    function, but finds 3 elements in the
-    array that sum to the desired value.
+    """Does the same thing as the above
+    function, but finds 3 elements.
 
     """
     sum_dict = {}
